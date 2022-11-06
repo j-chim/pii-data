@@ -15,14 +15,14 @@ GITHUB_URL = "https://github.com/piisa/pii-data"
 
 # --------------------------------------------------------------------
 
-#PYTHON_VERSION = (3, 8)
+PYTHON_VERSION = (3, 7)
 
-#if sys.version_info < PYTHON_VERSION:
-#    sys.exit(
-#        "**** Sorry, {} {} needs at least Python {}".format(
-#            PKGNAME, VERSION, ".".join(map(str, PYTHON_VERSION))
-#        )
-#    )
+if sys.version_info < PYTHON_VERSION:
+    sys.exit(
+        "**** Sorry, {} {} needs at least Python {}".format(
+            PKGNAME, VERSION, ".".join(map(str, PYTHON_VERSION))
+        )
+    )
 
 
 def requirements(filename="requirements.txt"):
@@ -60,7 +60,7 @@ setup_args = dict(
     packages=find_packages("src"),  # [ PKGNAME ],
     package_dir={"": "src"},
     # Requirements
-    python_requires=">=3.8",
+    python_requires=">=3.7",
     # Optional requirements
     extras_require={
         "test": ["pytest", "nose", "coverage"],
