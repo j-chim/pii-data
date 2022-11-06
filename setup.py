@@ -15,14 +15,14 @@ GITHUB_URL = "https://github.com/piisa/pii-data"
 
 # --------------------------------------------------------------------
 
-PYTHON_VERSION = (3, 8)
+#PYTHON_VERSION = (3, 8)
 
-if sys.version_info < PYTHON_VERSION:
-    sys.exit(
-        "**** Sorry, {} {} needs at least Python {}".format(
-            PKGNAME, VERSION, ".".join(map(str, PYTHON_VERSION))
-        )
-    )
+#if sys.version_info < PYTHON_VERSION:
+#    sys.exit(
+#        "**** Sorry, {} {} needs at least Python {}".format(
+#            PKGNAME, VERSION, ".".join(map(str, PYTHON_VERSION))
+#        )
+#    )
 
 
 def requirements(filename="requirements.txt"):
